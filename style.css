@@ -1,0 +1,166 @@
+*,*::before,*::after {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Lato";
+}
+
+@font-face {font-family: "Lato"; src: url("Lato.ttf")}
+@font-face {font-family: "Poppins"; src: url("Poppins.ttf")}
+@font-face {font-family: "Geograph"; src: url("Geograph.ttf")}
+
+*::selection {background: #f8e282;}
+*::-webkit-scrollbar {display: none;}
+html {scroll-behavior: smooth !important;}
+
+:root {
+  --gray: rgb(240, 240, 234);
+  --orange: rgb(222, 165, 81);
+  --yellow: rgb(242, 241, 169);
+  --red: rgb(213, 63, 63);
+  --brown: rgb(118, 73, 49);
+}
+
+body, .extraBG, #mainBG, .textBG, .textTXT {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {background-color: var(--yellow); justify-content: space-around;}
+
+#header {
+	z-index: 1000;
+	position: fixed;
+	top: 0vh;
+	left: 0vw;
+	width: 100vw;
+	height: 10vh;
+	background-color: rgb(214, 184, 138);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+  border: 1vh solid var(--brown);
+}
+
+#header p {
+	color: white;
+	text-align: center;
+	margin: 0vw 2vw 0vw 2vw;
+	font-size: 1.5vw;
+}
+
+#header p a, #header p i {
+	font-family: "Lato"; 
+	font-weight: 700; 
+	letter-spacing: 0.14vw;
+	color: white;
+}
+
+#mainBG {
+  z-index: 50;
+  position: absolute;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(0vw, 50vh);
+  flex-direction: column;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+#pt1 + .textBG {transform: translate(0vw, 100vh);}
+#dep1 {transform: translate(0vw, 200vh);}
+#dep2 {transform: translate(0vw, 300vh); flex-direction: row-reverse;}
+#dep3 {transform: translate(0vw, 400vh); gap: 1vw;}
+#dep4 {transform: translate(0vw, 500vh); flex-direction: row-reverse; gap: 1vw;}
+#dep5 {transform: translate(0vw, 600vh); gap: 1vw;}
+
+#pt2 {transform: translate(0vw, 700vh);}
+#pt2 + .textBG {transform: translate(0vw, 800vh);}
+#pt2 + .textBG + .textBG {transform: translate(0vw, 930vh);}
+#quote {transform: translate(0vw, 1050vh); padding-bottom: 18vh;}
+
+.mainTXT {
+  position: absolute;
+  color: darkblue;
+  font-size: 12vh;
+  letter-spacing: 1vw;
+  line-height: 11vw;
+  font-family: "Poppins";
+  font-weight: 900;
+}
+
+.textBG {
+  position: absolute;
+  flex-direction: column;
+  max-width: 80vw;
+}
+
+.textTXT {
+  flex-direction: row;
+  font-family: "Geograph";
+  font-size: 1.5vw;
+  text-align: justify;
+  align-items: flex-start;
+  line-height: 2.3vw;
+  gap: 4vw;
+}
+
+.title {font-weight: 900; font-size: 3.7vw;}
+hr {height: 0.4vh; border-radius: 100%;}
+.textBG hr {height: 0.8vh; width: 80vw;}
+
+.imgBG {
+  position: absolute;
+	display: flex;
+  flex-direction: row;
+	justify-content: center;
+	align-items: center;
+  gap: 4vw;
+}
+
+.imgTXT {
+  font-family: "Geograph";
+  font-size: 1.3vw;
+  transform: translate(0vw, -1.3vw);
+  max-width: 50vw;
+}
+
+#mainBG img {border-radius: 5%;}
+
+#quote .textTXT {
+  text-align: center;
+  font-size: 3vh;
+  line-height: 6vh;
+}
+
+#quote .textTXT p {font-family: "Poppins"; font-weight: 400;}
+
+.extraBG {
+	z-index: 97;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(241, 242, 242);
+  text-align: left;
+  border: 1vh dashed rgb(12, 12, 107);
+  overflow-y: scroll;
+}
+
+.sourcesTXT {
+  position: absolute;
+  top: 0vh;
+  font-family: "Lato", sans-serif;
+  color: rgb(83, 173, 197);
+  font-weight: 900;
+  font-size: 1.2vw; 
+  padding: 5vw 6vw 5vw 6vw;
+}
+
+.sourcesTXT span {
+  color: rgb(203, 179, 43);
+  font-family: "Geograph";
+  font-size: 2vw;
+}
